@@ -12,4 +12,11 @@ export default defineConfig({
     outDir: 'dist',
     minify: 'terser',
   },
+  // CSP nonce configuration
+  csp: {
+    enabled: true,
+    policy: {
+      'script-src': [`'self'`, `'strict-dynamic'`]
+    }
+  }
 })
